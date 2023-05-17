@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Weather Forecaster";
+}
+
+@model WaetherForecasterBLL.Models.WeatherForecasterDailyForPLModel
+
+<div style="float:left; padding: 5px">
+    Time:<br />
+    Max temperature (°C):<br />
+    Min temperature (°C):<br />
+    Max apparent temperature (°C):<br />
+    Min apparent temperature (°C):<br />
+    Precipitation SUM (mm):<br />
+    Precipitation Hours (h):<br />
+    Max precipitation probability (%):<br />
+    Max wind speed (km/h):<br />
+    Max wind gusts (km/h):<br />
+    Wind direction dominant (°):<br />
+</div>
+@foreach (var item in Model.WeatherForecasterDaily)
+{
+    <div style="float:left; padding: 10px; text-align:center">
+        @item.Time<br />
+        @item.TemperatureMax<br />
+        @item.TemperatureMin<br />
+        @item.ApparrentTemperatureMax<br />
+        @item.ApparrentTemperatureMin<br />
+        @item.PrecipitationSum<br />
+        @item.PrecipitationHours<br />
+        @item.PrecipitationProbabilityMax<br />
+        @item.WindSpeedMax<br />
+        @item.WindGustsMax<br />
+        @item.WindDirectionDominant<br />
+    </div>
+}
