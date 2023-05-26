@@ -14,8 +14,8 @@ namespace WaetherForecasterBLL.Models
         public string Time { get; set; }
         public double TemperatureMax { get; set; }
         public double TemperatureMin { get; set; }
-        public double ApparrentTemperatureMax { get; set; }
-        public double ApparrentTemperatureMin { get; set; }
+        public double ApparentTemperatureMax { get; set; }
+        public double ApparentTemperatureMin { get; set; }
         public double PrecipitationSum { get; set; }
         public double PrecipitationHours { get; set; }
         public int PrecipitationProbabilityMax { get; set; }
@@ -28,8 +28,8 @@ namespace WaetherForecasterBLL.Models
             Time = time;
             TemperatureMax = temperatureMax;
             TemperatureMin = temperatureMin;
-            ApparrentTemperatureMax = apparentTemperatureMin;
-            ApparrentTemperatureMin = apparentTemperatureMin;
+            ApparentTemperatureMax = apparentTemperatureMax;
+            ApparentTemperatureMin = apparentTemperatureMin;
             PrecipitationSum = precipitationSum;
             PrecipitationHours = precipitationHours;
             PrecipitationProbabilityMax = precipitationProbabilityMax;

@@ -1,0 +1,118 @@
+﻿.header {
+    background-color: rgb(0, 191, 255);
+    margin-bottom: 75px;
+}
+
+.headText {
+    color: white;
+    text-decoration: none;
+}
+
+    .headText:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+.tableLinesDiv {
+    background-color: rgb(58, 118, 163, 0.3);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 16.5%;
+    margin-right: 11%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3.5%;
+    padding-right: 3%;
+    border-radius: 100px;
+}
+
+.headlinesDiv {
+    margin-left: 11px;
+    float: left;
+    border-right: 5px solid lightgray;
+    border-left: 0px;
+}
+
+.headlines {
+    margin-bottom: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: rgb(106, 122, 165, 0.9);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: right;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.tableBody {
+    height: 32.1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(255, 255, 255, 0.9);
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    border-right: 1px solid lightgray;
+    white-space: nowrap;
+}
+
+hr {
+    color: black;
+    border-top: 3px solid black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 451%;
+    margin-left: 4px;
+}
+
+.footer {
+    margin-bottom: 0px;
+    background-color: rgb(0, 191, 255);
+    height: 33px;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 18.8%;
+}
+
+.footerText {
+    color: white;
+    -webkit-text-stroke: 0.2px silver;
+    font-size: 20px;
+}
+
+.table-div {
+    overflow-x: hidden;
+    width: 75%;
+}
+
+    .table-div:hover {
+        overflow-x: scroll;
+    }
+
+body {
+    overflow-y: hidden;
+}
+
+.w3-display-bottomright {
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+
+.w3-padding-large {
+    padding: 12px 24px !important
+}
+
+.w3-xxlarge {
+    font-size: 20px !important
+}
+
+.w3-xlarge {
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 26px !important
+}

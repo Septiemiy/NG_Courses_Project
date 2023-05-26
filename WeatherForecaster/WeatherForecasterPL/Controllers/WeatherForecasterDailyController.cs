@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WaetherForecasterBLL.Models;
 using WaetherForecasterBLL.Services;
 using WeatherForecaster.GetJSON;
+using WeatherForecasterPL.DTO;
 using WeatherForecasterPL.Models;
 
 namespace WeatherForecasterPL.Controllers
@@ -16,11 +16,9 @@ namespace WeatherForecasterPL.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Daily()
+        public async Task<IActionResult> Daily(WeatherForecasterDailyDTO model)
         {
             var services = new WeatherForecasterDailyServices();
-
-            var model = new WeatherForecasterDailyForPLModel();
 
             model.WeatherForecasterDaily = await services.GetWeatherDailyInfo();
 

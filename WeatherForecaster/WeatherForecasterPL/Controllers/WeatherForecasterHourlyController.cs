@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using WaetherForecasterBLL.Models;
 using WaetherForecasterBLL.Services;
+using WeatherForecasterPL.DTO;
 using WeatherForecasterPL.Models;
 
 namespace WeatherForecasterPL.Controllers
@@ -15,9 +16,17 @@ namespace WeatherForecasterPL.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Hourly()
+        [HttpPost]
+        [Route("Hourly")]
+        public async Task<IActionResult> Hourly(WeatherForecasterHourlyDTO model)
         {
-            return View();
+            string index = this.Request.Form["button"];
+
+            var services = new WeatherForecasterHourlyServices();
+
+            model.WeatherForecasterHourly = await services.GetWeatherHourlyInfo(int.Parse(index));
+
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

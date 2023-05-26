@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using WaetherForecasterBLL.Models;
 
 namespace WaetherForecasterBLL.Interfaces
 {
@@ -20,5 +21,6 @@ namespace WaetherForecasterBLL.Interfaces
         Task<double> GetWindSpeedMAX(JsonElement root, int index);
         Task<double> GetWindGustsMAX(JsonElement root, int index);
         Task<int> GetWindDirectionDominant(JsonElement root, int index);
+        Task<List<WeatherForecasterDailyModel>> GetWeatherDailyInfo();
     }
 }
