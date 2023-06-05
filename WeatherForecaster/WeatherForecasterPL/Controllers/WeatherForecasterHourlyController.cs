@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WaetherForecasterBLL.Interfaces;
 using WaetherForecasterBLL.Models;
 using WaetherForecasterBLL.Services;
 using WeatherForecasterPL.DTO;
@@ -9,22 +10,19 @@ namespace WeatherForecasterPL.Controllers
 {
     public class WeatherForecasterHourlyController : Controller
     {
-        private readonly ILogger<WeatherForecasterHourlyController> _logger;
+        private readonly IWeatherForecasterHourlyServices _services;
 
-        public WeatherForecasterHourlyController(ILogger<WeatherForecasterHourlyController> logger)
+        public WeatherForecasterHourlyController(IWeatherForecasterHourlyServices services)
         {
-            _logger = logger;
+            _services = services;
         }
 
-        [HttpPost]
         [Route("Hourly")]
         public async Task<IActionResult> Hourly(WeatherForecasterHourlyDTO model)
         {
             string index = this.Request.Form["button"];
 
-            var services = new WeatherForecasterHourlyServices();
-
-            model.WeatherForecasterHourly = await services.GetWeatherHourlyInfo(int.Parse(index));
+            model.WeatherForecasterHourly = await _services.GetWeatherHourlyInfo(int.Parse(index));
 
             return View(model);
         }

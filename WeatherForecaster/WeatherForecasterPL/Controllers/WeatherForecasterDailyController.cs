@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WaetherForecasterBLL.Interfaces;
 using WaetherForecasterBLL.Services;
 using WeatherForecaster.GetJSON;
 using WeatherForecasterPL.DTO;
@@ -9,18 +10,16 @@ namespace WeatherForecasterPL.Controllers
 {
     public class WeatherForecasterDailyController : Controller
     {
-        private readonly ILogger<WeatherForecasterDailyController> _logger;
+        private readonly IWeatherForecasterDailyServices _services;
 
-        public WeatherForecasterDailyController(ILogger<WeatherForecasterDailyController> logger)
+        public WeatherForecasterDailyController(IWeatherForecasterDailyServices services)
         {
-            _logger = logger;
+            _services = services;
         }
 
         public async Task<IActionResult> Daily(WeatherForecasterDailyDTO model)
         {
-            var services = new WeatherForecasterDailyServices();
-
-            model.WeatherForecasterDaily = await services.GetWeatherDailyInfo();
+            model.WeatherForecasterDaily = await _services.GetWeatherDailyInfo();
 
             return View(model);
         }

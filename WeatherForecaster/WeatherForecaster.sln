@@ -5,14 +5,14 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecasterPL", "WeatherForecasterPL\WeatherForecasterPL.csproj", "{4837CA23-9389-4B83-814C-96FE4D92AA09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaetherForecasterBLL", "WaetherForecasterBLL\WaetherForecasterBLL.csproj", "{4D89E249-6389-4366-9999-BC6DAF9F929C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecasterBLL", "WaetherForecasterBLL\WeatherForecasterBLL.csproj", "{4D89E249-6389-4366-9999-BC6DAF9F929C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{8230BF4A-4650-44A8-B8D1-2A3B86450ADE}"
 	ProjectSection(SolutionItems) = preProject
 		WeatherForecaster.json = WeatherForecaster.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecasterDAL", "WeatherForecasterDAL\WeatherForecasterDAL.csproj", "{684CC941-3B00-43A2-AB67-489301C4052D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecasterDAL", "WeatherForecasterDAL\WeatherForecasterDAL.csproj", "{684CC941-3B00-43A2-AB67-489301C4052D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
