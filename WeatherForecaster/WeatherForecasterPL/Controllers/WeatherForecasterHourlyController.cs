@@ -18,6 +18,7 @@ namespace WeatherForecasterPL.Controllers
         }
 
         [Route("Hourly")]
+        [HttpPost]
         public async Task<IActionResult> Hourly(WeatherForecasterHourlyDTO model)
         {
             string index = this.Request.Form["button"];

@@ -32,9 +32,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseMiddleware<LoggingMiddleware>();
-app.UseMiddleware<ErrorsLoggingMiddleware>();
-
 using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;
@@ -58,5 +55,8 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=WeatherForecasterDaily}/{action=Daily}/{id?}");
+
+app.UseMiddleware<LoggingMiddleware>();
+app.UseMiddleware<ErrorsLoggingMiddleware>();
 
 app.Run();

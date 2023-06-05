@@ -17,6 +17,7 @@ namespace WeatherForecasterPL.Controllers
             _services = services;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Daily(WeatherForecasterDailyDTO model)
         {
             model.WeatherForecasterDaily = await _services.GetWeatherDailyInfo();
